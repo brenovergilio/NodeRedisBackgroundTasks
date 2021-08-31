@@ -3,7 +3,13 @@ import Mail from '../lib/Mail.js';
 export default {
     key: 'RegistrationMail',
     options: {
-
+        delay: 5000,
+        priority: 3,
+        repeat: {
+            every: 1,
+            limit: 100
+        },
+        lifo: true
     },
     async handle({ data }) {
         const { user } = data;
