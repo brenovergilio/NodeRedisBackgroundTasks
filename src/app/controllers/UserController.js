@@ -5,7 +5,7 @@ export default {
         const { name, email } = req.body;
         const user = {
             name,
-            user,
+            email,
             password: passwordGenerator(15, false)
         };
 
